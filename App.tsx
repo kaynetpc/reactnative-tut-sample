@@ -4,6 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
+import { WelcomePage } from './pages/welcome/WelcomePage';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -14,7 +15,7 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Navigation colorScheme={colorScheme} />
+        <WelcomePage   />
         <StatusBar />
       </SafeAreaProvider>
     );
